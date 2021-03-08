@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellId" id="KGk-i7-Jjw" customClass="TableViewCell" customModule="cart" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q6j-l6-NMN">
+                        <rect key="frame" x="20" y="40" width="87.5" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Price" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MYs-Xw-H8r">
+                        <rect key="frame" x="347" y="40" width="39" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6P6-b6-Zgt">
+                        <rect key="frame" x="376" y="72" width="22" height="22"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="22" id="lbm-aO-jfV"/>
+                            <constraint firstAttribute="height" constant="22" id="x4J-Jc-PJs"/>
+                        </constraints>
+                        <state key="normal" image="cart.fill" catalog="system"/>
+                        <connections>
+                            <action selector="addToCartBtnTap:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="QXn-cU-w7E"/>
+                        </connections>
+                    </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dhE-o5-2xp">
+                        <rect key="frame" x="191" y="8" width="33" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="6P6-b6-Zgt" secondAttribute="trailing" constant="16" id="9pe-rH-qUE"/>
+                    <constraint firstAttribute="bottom" secondItem="6P6-b6-Zgt" secondAttribute="bottom" constant="6" id="Bk1-fF-DtJ"/>
+                    <constraint firstItem="q6j-l6-NMN" firstAttribute="top" secondItem="dhE-o5-2xp" secondAttribute="bottom" constant="14" id="X0K-eD-Gjj"/>
+                    <constraint firstItem="dhE-o5-2xp" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="npF-cn-h5z"/>
+                    <constraint firstItem="6P6-b6-Zgt" firstAttribute="leading" secondItem="MYs-Xw-H8r" secondAttribute="trailing" constant="20" id="sDD-cQ-YSH"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="descLabel" destination="q6j-l6-NMN" id="OTA-vf-YLJ"/>
+                <outlet property="priceLabel" destination="MYs-Xw-H8r" id="00f-hK-c0e"/>
+                <outlet property="titleLabel" destination="dhE-o5-2xp" id="cMV-43-bKg"/>
+            </connections>
+            <point key="canvasLocation" x="126" y="118"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="cart.fill" catalog="system" width="128" height="102"/>
+    </resources>
+</document>
